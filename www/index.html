@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Thomagotchi</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+      <script type="text/javascript" src="js\jquery-3.2.1.min.js"></script>
+      <title>Thomagotchi</title>
     </head>
     <body>
-        <script type="text/javascript" src="cordova.js"></script>
+      <div id="container">
+        <h1 id="naam">Thom</h1><button onclick="geefNaam()" type="button" name="button">Change name</button>
+        <div id="character"></div>
+        <div id="button-container">
+          <div id="food" class="button">Food
+            <progress value="100" max="100"></progress>
+          </div>
+          <div id="enjoyment" class="button">Play
+            <progress value="100" max="100"></progress>
+          </div>
+          <div id="sleep" class="button">Sleep
+            <progress value="100" max="100"></progress>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        function geefNaam() {
+          var naam = prompt("Enter your pets name", "Thom");
+
+          if (naam != null) {
+            document.getElementById("naam") = naam;
+          }
+        }
+      </script>
+      <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
