@@ -16,14 +16,30 @@ sleep = 110;
 
 setInterval(
   window.onload = function consume() {
+    if (food > 0) {
+      food -=10;
+      document.getElementById("food-p").value = food;
+    }else {
+      food -=0;
+      document.getElementById("food-p").value = food;
+    }
 
-    food -=10;
-    enjoy -=10;
-    sleep -=10;
+    if (enjoy > 0) {
+      enjoy -=10;
+      document.getElementById("enjoyment-p").value = enjoy;
+    }else {
+      enjoy -=0;
+      document.getElementById("enjoyment-p").value = enjoy;
+    }
 
-    document.getElementById("food-p").value = food;
-    document.getElementById("enjoyment-p").value = enjoy;
-    document.getElementById("sleep-p").value = sleep;
+    if (sleep > 0) {
+      sleep -=10;
+      document.getElementById("sleep-p").value = sleep;
+    }else {
+      sleep -=0;
+      document.getElementById("sleep-p").value = sleep;
+    }
+
     console.log("food: "+food);
     console.log("enjoyment: "+enjoy);
     console.log("sleep: "+sleep);
@@ -48,7 +64,6 @@ function enjoying() {
   }else {
     enjoy +=0;
   }
-
 }
 
 function sleeping() {
