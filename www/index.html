@@ -4,7 +4,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
       <script type="text/javascript" src="js\jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js\code.js"></script>
       <link rel="stylesheet" href="css/style.css">
       <title>Thomagotchi</title>
     </head>
@@ -15,18 +14,19 @@
         <div id="button-container">
           <div id="food" class="button">
             <label class="noselect">Food</label>
-            <progress value="100" max="100"></progress>
+            <progress id="food-p" value="100" max="100"></progress>
           </div>
           <div id="enjoyment" class="button">
             <label class="noselect">Play</label>
-            <progress value="100" max="100"></progress>
+            <progress id="enjoyment-p" value="100" max="100"></progress>
           </div>
           <div id="sleep" class="button">
             <label class="noselect">Sleep</label>
-            <progress value="100" max="100"></progress>
+            <progress id="sleep-p" value="100" max="100"></progress>
           </div>
         </div>
       </div>
       <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js\code.js"></script>
     </body>
 </html>

@@ -1,6 +1,9 @@
 body{
   margin: 0;
   padding: 0;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #container{
@@ -21,10 +24,11 @@ body{
 }
 
 #button-container{
-  width: 17%;
-  height: auto;
+  width: fit-content;
+  height: 500px;
   margin: 0 auto;
   margin-top: 50px;
+  clear: both;
 }
 
 .button{
@@ -36,6 +40,7 @@ body{
   border: 1px solid black;
   float: left;
   margin-left: 5px;
+  margin: 0 auto;
 }
 
 .button:hover{
@@ -47,6 +52,11 @@ body{
   margin-left: 0px;
 }
 
+button{
+  margin: 0 auto;
+  margin-left: 10px;
+}
+
 #food{}
 
 #enjoyment{}
@@ -54,6 +64,17 @@ body{
 #sleep{}
 
 progress{
-  width: 100px;
-  height: 20px;
+  width: 95px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.noselect{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
