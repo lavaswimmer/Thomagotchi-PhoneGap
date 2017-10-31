@@ -22,7 +22,22 @@ setInterval(
     sleep -=10;
 
     document.getElementById("food-p").value = food;
-    document.getElementById("enjoyment-p").value = food;
-    document.getElementById("sleep-p").value = food;
+    document.getElementById("enjoyment-p").value = enjoy;
+    document.getElementById("sleep-p").value = sleep;
   }
 ,5000);
+
+function feed() {
+  food +=15;
+  document.getElementById("food-p").value = food;
+}
+
+function enjoying() {
+  enjoy +=15;
+  document.getElementById("enjoyment-p").value = enjoy;
+}
+
+function sleeping() {
+  sleep +=15;
+  document.getElementById("sleep-p").value = sleep;
+}

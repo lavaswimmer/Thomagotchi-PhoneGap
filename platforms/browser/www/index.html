@@ -12,15 +12,15 @@
         <h1 id="naam">Thom<button onclick="geefNaam()" type="button" name="button">Change name</button></h1>
         <div id="character"></div>
         <div id="button-container">
-          <div id="food" class="button">
+          <div onclick="feed()" id="food" class="button">
             <label class="noselect">Food</label>
             <progress id="food-p" value="100" max="100"></progress>
           </div>
-          <div id="enjoyment" class="button">
+          <div onclick="enjoying()" id="enjoyment" class="button">
             <label class="noselect">Play</label>
             <progress id="enjoyment-p" value="100" max="100"></progress>
           </div>
-          <div id="sleep" class="button">
+          <div onclick="sleeping()" id="sleep" class="button">
             <label class="noselect">Sleep</label>
             <progress id="sleep-p" value="100" max="100"></progress>
           </div>
