@@ -85,6 +85,7 @@ setInterval(
   function dead() {
     if (food <= 0) {
       alert(naam+" is dead");
+      navigator.notification.alert(naam+' is dead', location.reload(), 'Game Over', 'Oke');
       location.reload();
     }else if (enjoy <= 0) {
       alert(naam+" is dead");
