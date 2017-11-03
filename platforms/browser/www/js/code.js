@@ -1,4 +1,6 @@
 // function to change the tamagotchi name
+var naam = "Thom";
+
 function geefNaam() {
   naam = prompt("Enter your pets name", "Thom");
 
@@ -45,7 +47,7 @@ setInterval(
     console.log("sleep: "+sleep);
     console.log("");
   }
-,5000);
+,1000);
 
 // functions to add more food/enjoyment/sleep
 function feed() {
@@ -74,3 +76,22 @@ function sleeping() {
     sleep +=0;
   }
 }
+
+// Dead
+
+console.log(food);
+
+setInterval(
+  function dead() {
+    if (food <= 0) {
+      alert(naam+" is dead");
+      location.reload();
+    }else if (enjoy <= 0) {
+      alert(naam+" is dead");
+      location.reload();
+    }else if (sleep <= 0) {
+      alert(naam+" is dead");
+      location.reload();
+    }
+  }
+,100);
