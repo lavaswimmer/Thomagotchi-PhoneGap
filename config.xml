@@ -10,4 +10,5 @@
     <content src="index.html" />
     <access origin="*" />
     <engine name="android" spec="~6.3.0" />
+    <engine name="windows" spec="~5.0.0" />
 </widget>

@@ -1,0 +1,81 @@
+﻿body{
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container{
+  width: 100%;
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+}
+
+#naam{
+  text-align: center;
+}
+
+#character{
+  width: 200px;
+  height: 300px;
+  background-color: grey;
+  margin: 0 auto;
+}
+
+#button-container{
+  width: fit-content;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  clear: both;
+}
+
+.button{
+  width: 100px;
+  height: 50px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border: 1px solid black;
+  float: left;
+  margin-left: 5px;
+  margin: 0 auto;
+}
+
+.button:hover{
+  background-color: #026b02;
+  transition: 0.5s;
+}
+
+.button:first-child{
+  margin-left: 0px;
+}
+
+button{
+  margin: 0 auto;
+  margin-left: 10px;
+}
+
+#food{}
+
+#enjoyment{}
+
+#sleep{}
+
+progress{
+  width: 95px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.noselect{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

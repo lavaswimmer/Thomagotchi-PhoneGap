@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+      <script type="text/javascript" src="js\jquery-3.2.1.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <title>Thomagotchi</title>
+    </head>
+    <body>
+      <div id="container">
+        <h1 id="naam">Thom<button onclick="geefNaam()" type="button" name="button">Change name</button></h1>
+        <div id="character"></div>
+        <div id="button-container">
+          <div onclick="feed()" id="food" class="button">
+            <label class="noselect">Food</label>
+            <progress id="food-p" value="100" max="100"></progress>
+          </div>
+          <div onclick="enjoying()" id="enjoyment" class="button">
+            <label class="noselect">Play</label>
+            <progress id="enjoyment-p" value="100" max="100"></progress>
+          </div>
+          <div onclick="sleeping()" id="sleep" class="button">
+            <label class="noselect">Sleep</label>
+            <progress id="sleep-p" value="100" max="100"></progress>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js\code.js"></script>
+    </body>
+</html>
