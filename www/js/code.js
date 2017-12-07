@@ -1,53 +1,59 @@
+var naam = null;
+var food = 110;
+var enjoy = 110;
+var sleep = 110;
+
 // function to change the tamagotchi name
-var naam = "Thom";
+window.onload = geefNaam();
 
-function geefNaam() {
-  naam = prompt("Enter your pets name", "Thom");
+function geefNaam(){
 
-  if (naam !== null) {
-    document.getElementById("naam").innerHTML = naam;
-    document.title = naam+"agotchi";
+  if (naam == null) {
+      naam = prompt("Enter your pets name", "Thom");
+      geefNaam();
+  }else{
+      document.getElementById("naam").innerHTML = naam;
+      document.title = naam+"agotchi";
+      consume();
   }
 }
 
 // consuming the food/play/sleep
 
-food = 110;
-enjoy = 110;
-sleep = 110;
+function consume(){
 
-setInterval(
-  window.onload = function consume() {
-    if (food > 0) {
-      food -=10;
-      document.getElementById("food-p").value = food;
-    }else {
-      food -=0;
-      document.getElementById("food-p").value = food;
-    }
+    setInterval(function() {
+        if (food > 0) {
+          food -=10;
+          document.getElementById("food-p").value = food;
+        }else {
+          food -=0;
+          document.getElementById("food-p").value = food;
+        }
 
-    if (enjoy > 0) {
-      enjoy -=10;
-      document.getElementById("enjoyment-p").value = enjoy;
-    }else {
-      enjoy -=0;
-      document.getElementById("enjoyment-p").value = enjoy;
-    }
+        if (enjoy > 0) {
+          enjoy -=10;
+          document.getElementById("enjoyment-p").value = enjoy;
+        }else {
+          enjoy -=0;
+          document.getElementById("enjoyment-p").value = enjoy;
+        }
 
-    if (sleep > 0) {
-      sleep -=10;
-      document.getElementById("sleep-p").value = sleep;
-    }else {
-      sleep -=0;
-      document.getElementById("sleep-p").value = sleep;
-    }
+        if (sleep > 0) {
+          sleep -=10;
+          document.getElementById("sleep-p").value = sleep;
+        }else {
+          sleep -=0;
+          document.getElementById("sleep-p").value = sleep;
+        }
 
-    console.log("food: "+food);
-    console.log("enjoyment: "+enjoy);
-    console.log("sleep: "+sleep);
-    console.log("");
-  }
-,1000);
+        console.log("food: "+food);
+        console.log("enjoyment: "+enjoy);
+        console.log("sleep: "+sleep);
+        console.log("");
+      }
+    ,1000);
+}
 
 // functions to add more food/enjoyment/sleep
 function feed() {
@@ -85,7 +91,6 @@ setInterval(
   function dead() {
     if (food <= 0) {
       alert(naam+" is dead");
-      navigator.notification.alert(naam+' is dead', location.reload(), 'Game Over', 'Oke');
       location.reload();
     }else if (enjoy <= 0) {
       alert(naam+" is dead");
